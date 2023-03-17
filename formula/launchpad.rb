@@ -6,15 +6,15 @@ require_relative "../custom_download_strategy"
 class Launchpad < Formula
   desc "Software to be used as a service scaffolding tool for Clicks & Mortar engineers"
   homepage "https://clicksandmortar.tech/"
-  version "2.76.2"
+  version "2.76.3"
   license "MIT"
 
   depends_on "zsh"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/clicksandmortar/launchpad/releases/download/v2.76.2/Launchpad_2.76.2_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7736290a2b5cf0007f92c1616561f653ec734359b07007a7022d6c6172044cc5"
+      url "https://github.com/clicksandmortar/launchpad/releases/download/v2.76.3/Launchpad_2.76.3_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c78b0f8d83f123e49bac65d087f4e259bdfa1e5b1dcb090026056c274279a1a9"
 
       def install
         bin.install "launchpad"
@@ -24,8 +24,8 @@ class Launchpad < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clicksandmortar/launchpad/releases/download/v2.76.2/Launchpad_2.76.2_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "91b1d0206e81c60b31ed8206164ef8daaef20f011669d3d50d26e90cf69e382c"
+      url "https://github.com/clicksandmortar/launchpad/releases/download/v2.76.3/Launchpad_2.76.3_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "52de75f81f2c30240a5320037690070a350c8fe6e41b2fe502919af7cc7f4e11"
 
       def install
         bin.install "launchpad"
